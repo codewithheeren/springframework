@@ -1,0 +1,24 @@
+
+spring:
+ profiles:
+  active: prod
+ 
+---
+
+spring:
+ profiles: dev
+
+database:
+ driver: driverPostgre
+ username: admindev
+ password: devroot
+ 
+---
+
+spring:
+ profiles: prod
+
+database:
+ driver: driverMySql
+ username: adminprod
+ password: prodroot
