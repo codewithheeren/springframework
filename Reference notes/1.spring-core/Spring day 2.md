@@ -5,9 +5,9 @@
  **Topics Covered**
 --------------
 - Bean Autowiring 
-	  - Autowiring by name
-	  - Autowiring by type
-	  - Autowiring using a constructor.
+  - Autowiring by name
+  - Autowiring by type
+  - Autowiring using a constructor   
 - Cyclic Dependency
 - Annotations    
 - Stereotype annotations
