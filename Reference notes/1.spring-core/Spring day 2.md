@@ -9,18 +9,18 @@
 	  - Autowiring by type
 	  - Autowiring using a constructor.
 - Cyclic Dependency
-- Annotations
-    - Stereotype annotations 
-	      - @Controller 
-	      - @Component
-        - @Service
-        - @Repository
-@Value 
-@Configuration 
-@Autowired
-@Qualifier("company1")
-@Primary
-@Bean 
-@Scope
+- Annotations    
+- Stereotype annotations
+  - @Controller    
+  - @Component    
+  - @Service    
+  - @Repository    
+- @Value
+- @Configuration
+- @Autowired
+- @Qualifier("company1")
+- @Primary
+- @Bean
+- @Scope  
 
 --------------
