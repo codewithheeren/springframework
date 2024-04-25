@@ -1,23 +1,22 @@
-## Springframework 
+## Springframework Day 1
 
  @author Heeren
 
  **Topics Covered**
 --------------
--   Features of Java
+- Preemptive injection
+- Collection injection
+- Dependency injection
+    - Setter injection
+    - constructor injection
+- Nested bean
+- Bean aliasing 
+- Bean inheritance 
+- Bean scope
+- Collection merging 
+- Lookup method injection
     
 --------------
-
-**Features of Java**
-
-- Platform independent language
-- Secure language
-- Robust language
-- Multithreaded language
-- Object oriented language
-- Open source language
-
----
 ### What is Spring framework and its advantages?
 
 - A framework that came up with its own API
