@@ -21,6 +21,7 @@
 - @Qualifier("company1")
 - @Primary
 - @Bean
-- @Scope  
+- @Scope
+- Creating multiple beans for same class in annotation approach
 
 --------------
