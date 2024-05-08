@@ -1,4 +1,4 @@
-## Springframework Day 2
+## Springframework Day 2 - Spring Core 
 
  @author Heeren
 
