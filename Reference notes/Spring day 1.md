@@ -4,6 +4,12 @@
 
  **Topics Covered**
 --------------
+- Spring Framework Introduction
+- Features of Spring Framework
+- Achive Loosly coupling classes using strategy design pattern and spring framework
+- Modules of Spring Framework
+- IOC Container    
+   Spring Core -
 - Preemptive injection
 - Collection injection
 - Dependency injection
