@@ -1,0 +1,60 @@
+## Springframework Day 5 - Spring Boot Part 1 
+
+ @author Heeren
+
+ ### Topics Covered
+--------------
+- SpringBoot Overview
+- Features Of Spring Boot
+- Different ways to create spring boot application
+    - Using Spring initializr
+    - Using the CLI
+    - Using STS
+
+- Understanding the Spring Boot Starter
+- Understanding Different components of spring boot Application
+- Understanding application.properties
+- Understanding the Spring Boot autoconfiguration
+- Overriding the default configuration values
+- Reading the Custom Properties
+- Use of yaml file for configuration
+- Using multiple Configuration files
+--------------
+
+
+#### How many ways we can create Spring Boot project?
+
+- Using IDE
+- Using Spring Initializer
+- Using Spring CLI
+
+#### What is Spring Boot?
+
+Spring Boot is a module of spring framework use for rapid application development.It simplifies the process of developing stand-alone, production-ready applications.
+
+#### Features of Spring Boot:
+
+- Embedded server
+- Developer tool
+- Spring Boot starter projects
+- Actuators
+- Autoconfiguration
+
+#### What is the use of developer tool ?
+
+The developer tool provides features such as automatic restarts, LiveReload, and remote debugging.
+
+#### List down some names of Spring Boot starter projects .
+
+- Spring Boot Starter Web
+- Spring Boot Starter Actuators
+- Spring Boot Starter Tomcat
+- Spring Boot Starter Data JPA
+- Spring Boot Starter AOP
+
+#### What is the use of `@SpringBootApplication` Annotation?
+
+The `@SpringBootApplication` annotation is a combination of the following annotations:
+- `@Configuration`
+- `@EnableAutoConfiguration`
+- `@ComponentScan`
