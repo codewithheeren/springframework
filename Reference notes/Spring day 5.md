@@ -13,13 +13,19 @@
 - Understanding Different components of spring boot Application
 - Understanding application.properties
 - Understanding the Spring Boot autoconfiguration
-- Overriding the default configuration values
 - Reading the Custom Properties
-- Use of yaml file for configuration
-- Using multiple Configuration files
-
+- Properties file vs yaml file configuration
+- Read properties using @ConfigurationProperties
+- CommandLineRunner
+- Project Lombok annotations
+  - @Setter
+  - @Getter
+  - @ToString
+  - @NoArgsConstructor
+  - @AllArgsConstructor
+  - @RequiredArgsConstructor
+  - @Data
 ---
-
 
 #### How many ways we can create Spring Boot project?
 
