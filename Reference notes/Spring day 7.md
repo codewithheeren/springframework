@@ -1,0 +1,12 @@
+## Springframework Day 7 - Spring Security
+
+ @author Heeren
+
+ ### Topics Covered
+
+- Spring Security Basic Authentication
+- Spring boot URL Based Security 
+- Spring Security Implementation In MVC Based Application with data jpa
+- Spring Role Based Security Implementation
+---
+
