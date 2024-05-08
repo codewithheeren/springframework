@@ -3,14 +3,12 @@
  @author Heeren
 
  ### Topics Covered
---------------
-- SpringBoot Overview
+- SpringBoot Overview   
 - Features Of Spring Boot
 - Different ways to create spring boot application
     - Using Spring initializr
     - Using the CLI
     - Using STS
-
 - Understanding the Spring Boot Starter
 - Understanding Different components of spring boot Application
 - Understanding application.properties
@@ -19,7 +17,8 @@
 - Reading the Custom Properties
 - Use of yaml file for configuration
 - Using multiple Configuration files
---------------
+
+---
 
 
 #### How many ways we can create Spring Boot project?
