@@ -1,0 +1,76 @@
+## Springframework Day 3 - Spring AOP 
+
+ @author Heeren
+
+ ### Topics Covered
+--------------
+- Aspect
+- Advice
+- Joinpoint
+- Pointcut
+- Advisor
+- Target
+- Proxy
+- Weaving
+- Types of advices   
+  - Before Advice 
+  - After Advice
+  - After Throwing Advice 
+  - After returning Advice 
+  - Around Advice 
+- Aspect Annotation - 
+- @Aspect
+- @Before
+- @After
+- @Around
+- @Pointcut
+- @AfterReturning
+- @AfterThrowing
+- @EnableAspectJAutoProxy
+- Main challenge while dealing with AOP?
+
+--------------
+### Need of spring AOP 
+- Primary business logic - Main logic of any particular functionality
+- Secondary business logic or cross cutting functionality - Services added to primary business logic
+EG.- 
+#### Logging
+```java
+method(){        //tax calculate 
+Security check// Code for security check
+Core functionality
+Logging         // Logging related code
+}
+```
+---
+
+AOP (Aspect Oriented Programming)
+**Aspect**: Term use to represent cross cutting functionality. It is a class that contains advices.
+**Advice**: Implementation of aspect. Advice represents an action taken by an aspect at a particular join point.
+**Join point**: A point where advice is join with primary business logic. It can be any point in your program such as method execution, exception handling. 
+**Point cut**: A collection of join points. It is use to define an expression, AOP that matches join points. Point cut verify whether the target method is matching with particular criteria or expression or not. If matching then method Is a join point.
+**Advisor**: Is the combination of pointcut and advice.
+**Target**: The primary logic class or object or method.
+**AOP Proxy**: An object of proxy class created by the AOP framework in order to implement the aspect contracts.
+**Weaving**: Link advice with primary logic class to create an aspect. Weaving is the process of generating proxy class by merging primary business logic and cross cutting functionality. 
+**Weaving can be done at compile time, load time or runtime.**
+**Compile time Weaving**: Business class compile separately and cross cutting functionality compile separately and create proxy at compile time.
+**Load time Weaving**: Business class compile separately and cross cutting functionality compile separately and create proxy at load time.
+**Runtime Weaving**: Both load and compile independently, at run time proxy will be created. Spring AOP performs weaving at runtime.
+**Types of advices**:
+**Before Advice**: It executes before a join point or target. Execute before execution of primary business logic.
+**After Advice**: Execute after execution of primary business logic. Do not matter if execute successfully or exception occur.
+**After Throwing Advice**: It executes if method exits by throwing an exception.
+**After Returning Advice**: It executes after a joint point completes normally. Execute only after primary business method execute and return successfully.
+**Around Advice**: It executes before and after a join point. Execute before and after execution of primary business logic.
+**Aspect Annotations:**
+@Aspect: Defining aspect class.
+@Before: Define advice before target method execution.
+@After: Define advice after target method execution.
+@Around: Define advice before and after target method execution.
+@Pointcut: Define expression to map multiple advices with multiple joinpoints.
+@AfterReturning: Execute advice when target method returning value.
+@AfterThrowing: Execute advice when target class method throw exception.
+@EnableAspectJAutoProxy: Allow spring AOP. Put inside of configuration class.
+**Note- **
+Because proxy class created at runtime, it's difficult to debug application sometimes.
