@@ -1,4 +1,4 @@
-## Springframework Day 5 - Spring Boot Part 2 
+## Springframework Day 6 - Spring Boot Part 2 
 
  @author Heeren
 
