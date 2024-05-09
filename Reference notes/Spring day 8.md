@@ -23,6 +23,9 @@
 - Different Code Responses
 - How to Make URL Using @RequestParam?
 - Difference Between REST API and RESTful API
+- Spring boot + data JPA + REST - CRUD operation implementation
+- Global exception handling in Rest API project
+- Actuator REST end points
 
 ---
 **What is REST?**  
