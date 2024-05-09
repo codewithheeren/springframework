@@ -4,6 +4,25 @@
 
  ### Topics Covered
 
+- What is REST ?
+- HTTP Standard Methods ?
+- Difference Between SOAP and REST ?
+- What is Payload?
+- Difference Between HTTP and HTTPS ?
+- What is a Resource ?
+- Best Practices for Designing RESTful Web Services 
+- Safe and Unsafe Methods in REST
+- Difference Between POST and PUT
+- Why is the HEAD Method Used in REST ?
+- Why is the PATCH Method Used in REST ?
+- What is the OPTIONS Method ?
+- List of Annotations in RESTful Service
+- Difference Between @RequestMapping and @GetMapping
+- Difference Between @RequestParam and @PathVariable
+- What is the Use of @Path Annotation in RESTful ?
+- Different Code Responses
+- How to Make URL Using @RequestParam?
+- Difference Between REST API and RESTful API
 
 ---
 **What is REST?**  
@@ -11,7 +30,40 @@
 - It is used to develop distributed applications.
 - It's not a protocol; it's an architectural style used to develop web services.
 - It uses HTTP protocol for data communication.
-- In RESTful web services, we implement HTTP standard methods.
+- In RESTful web services, we implement HTTP standard methods.    
+
+**HTTP Standard Methods**
+The different HTTP standard methods used in REST include:
+- GET
+- POST
+- PUT
+- DELETE
+- PATCH
+
+**Example JSON data:**
+
+```json
+
+{
+
+    "userid": "32",
+
+    "username": "heeren",
+
+    "nationality": "indian"
+
+}
+
+{
+
+    "id": "123",
+
+    "name": "Tom",
+
+    "salary": "25000"
+
+}
+```
 
 **Difference Between SOAP and REST?**  
 ![Capture1](https://github.com/codewithheeren/springframework/assets/87074236/fbfa5295-b127-4a97-8d57-7a2df2a4596b)
@@ -77,3 +129,15 @@ The @Path annotation is used to identify the URI path. It can be specified at th
   - 200: OK (success)
 ![image](https://github.com/codewithheeren/springframework/assets/87074236/f941c570-bdb1-41e7-be19-b4175e1f9493)
 
+**How to Make URL (http://localhost:8080/api/foos?id=abc) Using @RequestParam?**
+```java
+@GetMapping("/api/foos")
+@ResponseBody
+public String getFoos(@RequestParam String id) {
+    return "ID: " + id;
+}
+or
+public String getFoos(@RequestParam(required = false) String id) {}
+or
+public String getFoos(@RequestParam Optional<String> id) {}
+```
