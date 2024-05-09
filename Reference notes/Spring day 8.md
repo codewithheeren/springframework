@@ -7,10 +7,17 @@
 
 ---
 **What is REST?**  
-REST stands for Representational State Transfer. It is used to develop distributed applications. It's not a protocol; it's an architectural style used to develop web services. It uses HTTP protocol for data communication. In RESTful web services, we implement HTTP standard methods.
+- REST stands for Representational State Transfer.
+- It is used to develop distributed applications.
+- It's not a protocol; it's an architectural style used to develop web services.
+- It uses HTTP protocol for data communication.
+- In RESTful web services, we implement HTTP standard methods.
 
 **Difference Between SOAP and REST?**  
-SOAP and REST are both web service communication protocols, but they have significant differences. SOAP (Simple Object Access Protocol) is a protocol while REST is an architectural style. SOAP is more rigid and formal, while REST is lightweight and flexible.
+![Capture1](https://github.com/codewithheeren/springframework/assets/87074236/fbfa5295-b127-4a97-8d57-7a2df2a4596b)
+![Capture2](https://github.com/codewithheeren/springframework/assets/87074236/304c734f-e370-4af7-ae1c-4dbee2ad7960)
+![Capture3](https://github.com/codewithheeren/springframework/assets/87074236/d071e606-9543-46b5-9197-7fc57307c19b)
+
 
 **Difference Between HTTP and HTTPS?**  
 HTTP (Hypertext Transfer Protocol) is unsecured while HTTPS (Hypertext Transfer Protocol Secure) is secured. HTTP sends data over port 80, while HTTPS operates over port 443. HTTP operates at the application layer, while HTTPS operates at the transport layer. SSL certificates are required for HTTPS but not for HTTP.
@@ -67,14 +74,6 @@ Both @RequestParam and @PathVariable are used to extract values from the request
 The @Path annotation is used to identify the URI path. It can be specified at the class or method level to define a common path for all endpoints in the class or for specific endpoints.
 
 **Different Code Responses**   
-- 200: OK (success)
-- ...
+  - 200: OK (success)
+![image](https://github.com/codewithheeren/springframework/assets/87074236/f941c570-bdb1-41e7-be19-b4175e1f9493)
 
-**How to Make URL (http://localhost:8080/api/foos?id=abc) Using @RequestParam?**    
-```java
-@GetMapping("/api/foos")
-@ResponseBody
-public String getFoos(@RequestParam String id) {
-    return "ID: " + id;
-}
-```
