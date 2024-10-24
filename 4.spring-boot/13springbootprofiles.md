@@ -1,0 +1,142 @@
+## Implementing Spring Boot Profiles With Properties File
+### pom.xml 
+```xml
+  <dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+	</dependencies>
+```
+---
+### application.properties 
+```properties
+spring.profiles.active=dev
+server.port=9090
+
+# activate profile from VM Arguments 
+# -Dspring.profiles.active=qa
+
+```
+---
+### application-dev.properties 
+```properties
+database.driver=oracledriver
+database.username=devadmin
+database.password=devpassword
+
+```
+---
+### application-qa.properties 
+```properties
+database.driver=oracledriver
+database.username=qaadmin
+database.password=qapassword
+
+```
+---
+### CustomDataSource.java
+```java
+/** 
+ * Utilit class consuming proeperties
+ * @author Heeren
+ * @version 1.0
+ */
+package com.codewithheeren.utlity;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
+
+@Component
+@ConfigurationProperties("database")
+public class CustomDataSource {
+	private String driver;
+	private String username;
+	private String password;
+	
+	public String getDriver() {
+		return driver;
+	}
+
+	public void setDriver(String driver) {
+		this.driver = driver;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	@Override
+	public String toString() {
+		return "CustomDataSource [driver=" + driver + ", username=" + username + ", password=" + password + "]";
+	}
+	
+}
+
+```
+---
+### Application.java
+```java
+/** 
+ * Main class implementation
+ * @author Heeren
+ * @version 1.0
+ */
+package com.codewithheeren.startapp;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.PropertySource;
+import com.codewithheeren.utlity.CustomDataSource;
+
+@SpringBootApplication
+@ComponentScan("com.apolis")
+@PropertySource({"classpath:application-dev.properties","classpath:application-qa.properties"})
+public class Application {
+
+	public static void main(String[] args) {
+		ApplicationContext context = SpringApplication.run(Application.class, args);
+		CustomDataSource dataSource = (CustomDataSource) context.getBean("customDataSource");
+		System.out.println(dataSource.toString());
+	}
+
+}
+
+
+```
+---
