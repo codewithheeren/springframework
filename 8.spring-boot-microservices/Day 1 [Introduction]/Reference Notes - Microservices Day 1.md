@@ -27,4 +27,6 @@
 
 In the above figure, each microservice has its own business layer and database. If we change in one microservice, it does not affect the other services.    
 - These services communicate with each other by using lightweight protocols such as HTTP or REST or messaging protocols.   
-
+🔵 Microservices Vs Monolothic Architecture   
+🔵 Challenges of Microservice application developement    
+🔵 Spring Cloud    
