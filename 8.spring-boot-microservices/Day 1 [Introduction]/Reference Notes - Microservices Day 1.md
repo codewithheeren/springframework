@@ -11,39 +11,20 @@
 .
 8. [Assignment](#8-assignment)
 --------------
+🔵 **Monolithic Application Architecture**     
 
-## 1. Topics comes form notes
- 
-<table>
-    <tr>
-        <td><a href="https://www.youtube.com/watch?v=SUnAsQykPfw&list=PLI8XC2Oz_l1qMnpB-6Kc3Ck0RuCqDKCCQ&index=1">
-            <img src="https://github.com/user-attachments/assets/393a6073-ba6a-48dd-972b-9e9b8d908e45" alt="yt" width="20" height="20">
-        </a></td>
-        <th align="left">1.1 Platform independent language</th>
-    </tr>
- </table> 
- 
-🔵 **Plateform Dependency With C Language Program**  
+- Monolithic application holds all modules together and converted as one Service (one .war file).    
+- In Monolothic application all components (frontend, backend)are tightly integrated.    
+- This approach works well for small to medium-scale applications.    
+    
+🔵 **Microservice Application Architecture**    
+- Microservices is an architecture style where we develop application having multiple services.    
+- Each service is independent or loosely coupled, cloud enabled and deployable.    
+- Those services interact with each other and exposed by REST.
+- The most important feature of the microservice-based architecture is that it can perform continuous delivery of a large and complex application.
 
-![c prgram](https://github.com/codewithheeren/Java/assets/87074236/450da9f3-99c5-4cd6-bf8c-dab36ad42986)      
+![image](https://github.com/user-attachments/assets/58f1277e-50dc-4ae7-92db-d0182b0474c9)
 
+In the above figure, each microservice has its own business layer and database. If we change in one microservice, it does not affect the other services.    
+- These services communicate with each other by using lightweight protocols such as HTTP or REST or messaging protocols.   
 
-🔵 **Plateform Independency with Java Program Execution**
-
-Java Program -> **javac Compiler** -> Byte Code ->** JRE **-> Machine Code
-
-![image](https://github.com/user-attachments/assets/989499d5-d72a-4c95-9e4e-7d0c1e611218)
- <table>
-    <tr>
-        <td><a href="https://www.youtube.com/watch?v=1xjKbfvh01o&list=PLI8XC2Oz_l1qMnpB-6Kc3Ck0RuCqDKCCQ&index=2">
-            <img src="https://github.com/user-attachments/assets/393a6073-ba6a-48dd-972b-9e9b8d908e45" alt="yt" width="20" height="20">
-        </a></td>
-        <th align="left">1.2 Secure language</th>
-    </tr>
-    <tr>
-        <td><a href="https://www.youtube.com/watch?v=1xjKbfvh01o&list=PLI8XC2Oz_l1qMnpB-6Kc3Ck0RuCqDKCCQ&index=2">
-            <img src="https://github.com/user-attachments/assets/393a6073-ba6a-48dd-972b-9e9b8d908e45" alt="yt" width="20" height="20">
-        </a></td>
-        <th align="left">1.3 Robust language</th>
-    </tr>
-  </table>
