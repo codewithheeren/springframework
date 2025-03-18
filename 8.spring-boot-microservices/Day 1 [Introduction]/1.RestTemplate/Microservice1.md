@@ -55,6 +55,55 @@
 server.port = 8181
 ```
 ---
+### MicroservicesApplication.java
+```java
+package com.codewithheeren.microservices;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
+import com.codewithheeren.microservices.service.EmployeeService;
+/**
+ * This class implements Rest Template.
+ * This microservice 1 have one service class(EmployeeService) .
+ * Employee Service class make call to Microservice 2 controller rest endpoints and consume those rest end points.
+ * @author Heeren
+ * @version 1.0
+ */
+@SpringBootApplication
+public class MicroservicesApplication {
+
+    public static void main(String[] args) {
+        ApplicationContext context = SpringApplication.run(MicroservicesApplication.class, args);
+        EmployeeService service = context.getBean(EmployeeService.class);
+
+        System.out.println("Microservice-1 ...");
+
+        // Step 1: Create a new employee
+        service.createEmployee();
+
+        // Step 2: Get newly created employee
+        service.getEmployeeById(3L);
+
+        // Step 3: Get all employees
+        service.getAllEmployees();
+
+        // Step 4: Update employee
+        service.updateEmployee(3L);
+
+        // Step 5: Delete employee
+        service.deleteEmployee(3L);
+    }
+
+    @Bean
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
+}
+```
+---
 ### EmployeeDTO.java
 ```java
 package com.codewithheeren.microservices.entity;
@@ -188,46 +237,3 @@ public class EmployeeService {
 ```
 ---
 
-### MicroservicesApplication.java
-```java
-package com.codewithheeren.microservices;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Bean;
-import org.springframework.web.client.RestTemplate;
-import com.codewithheeren.microservices.service.EmployeeService;
-
-@SpringBootApplication
-public class MicroservicesApplication {
-
-    public static void main(String[] args) {
-        ApplicationContext context = SpringApplication.run(MicroservicesApplication.class, args);
-        EmployeeService service = context.getBean(EmployeeService.class);
-
-        System.out.println("Microservice-1 ...");
-
-        // Step 1: Create a new employee
-        service.createEmployee();
-
-        // Step 2: Get newly created employee
-        service.getEmployeeById(3L);
-
-        // Step 3: Get all employees
-        service.getAllEmployees();
-
-        // Step 4: Update employee
-        service.updateEmployee(3L);
-
-        // Step 5: Delete employee
-        service.deleteEmployee(3L);
-    }
-
-    @Bean
-    public RestTemplate restTemplate() {
-        return new RestTemplate();
-    }
-}
-```
----
