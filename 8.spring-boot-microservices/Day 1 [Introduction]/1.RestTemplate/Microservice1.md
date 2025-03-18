@@ -67,6 +67,7 @@ import org.springframework.web.client.RestTemplate;
 import com.codewithheeren.microservices.service.EmployeeService;
 /**
  * This class implements Rest Template.
+ * Microservice 1 is client class which is consuming Microservice 2.
  * This microservice 1 have one service class(EmployeeService) .
  * Employee Service class make call to Microservice 2 controller rest endpoints and consume those rest end points.
  * @author Heeren
