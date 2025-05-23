@@ -1,4 +1,3 @@
-**Microservices Curriculum** 
  **Topics Covered**
 --------------
 1. Microservices Introduction 
